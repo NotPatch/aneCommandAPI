@@ -54,7 +54,6 @@ public Commands(AneRequestShop plugin) {
                     }
                 })
                 .register();
-        registerCommands();
     }
 ```
 
