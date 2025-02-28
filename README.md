@@ -1,6 +1,6 @@
 # aneCommandAPI
 Simple command generation system without plugin.yml for minecraft bukkit api.
-With this API; You can create a command in seconds, specify permissions, add arguments (max-min argument warning message included), aliases commands and tab complete. All you have to do is put the package you downloaded into the src\main\java\ directory. that's all.
+With this API; You can create a command in seconds, specify permissions, add arguments (max-min argument warning message included), aliases commands and tab complete. All you have to do is put the package you downloaded into the **src\main\java\** directory. that's all.
 
 # Example uses
 * Basicly gamemode change command
@@ -70,3 +70,7 @@ CommandManager manager = new CommandManager(plugin.getInstance());
 manager.register("hellohell").register(); //you know more ;)
 
 ```
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
+  
