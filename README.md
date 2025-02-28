@@ -9,8 +9,8 @@ With this API; You can create a command in seconds, specify permissions, add arg
 ![](https://github.com/therealthread/aneCommandAPI/blob/main/tabcomp.png?raw=true)
 
 ```java
-public Commands(AneRequestShop plugin) {
-        this.plugin = plugin;
+
+public Commands(JavaPlugin plugin) { //your command class
         CommandManager manager = new CommandManager(plugin);
 
         manager.register("gamemode")
