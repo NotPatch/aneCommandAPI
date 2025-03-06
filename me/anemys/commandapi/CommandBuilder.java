@@ -27,7 +27,6 @@ public class CommandBuilder {
     private String argErrorMessage;
 
     /**
-     * Constructor for the CommandBuilder class.
      *
      * @param plugin The plugin instance.
      * @param name   The name of the command.
@@ -38,7 +37,6 @@ public class CommandBuilder {
     }
 
     /**
-     * Sets the executor for player commands.
      *
      * @param executor The BiConsumer to handle player commands.
      * @return The CommandBuilder instance.
@@ -49,7 +47,6 @@ public class CommandBuilder {
     }
 
     /**
-     * Sets the executor for console commands.
      *
      * @param executor The BiConsumer to handle console commands.
      * @return The CommandBuilder instance.
@@ -60,7 +57,6 @@ public class CommandBuilder {
     }
 
     /**
-     * Sets the tab completer for the command.
      *
      * @param completer The BiFunction to handle tab completion.
      * @return The CommandBuilder instance.
@@ -71,7 +67,6 @@ public class CommandBuilder {
     }
 
     /**
-     * Sets the permission required to execute the command.
      *
      * @param permission The permission string.
      * @return The CommandBuilder instance.
@@ -82,7 +77,6 @@ public class CommandBuilder {
     }
 
     /**
-     * Sets the message to be sent if the user lacks permission.
      *
      * @param message The no permission message.
      * @return The CommandBuilder instance.
@@ -111,7 +105,6 @@ public class CommandBuilder {
     }
 
     /**
-     * Sets the aliases for the command.
      *
      * @param aliases The command aliases.
      * @return The CommandBuilder instance.
@@ -122,7 +115,6 @@ public class CommandBuilder {
     }
 
     /**
-     * Sets the description for the command.
      *
      * @param description The command description.
      * @return The CommandBuilder instance.
@@ -133,7 +125,6 @@ public class CommandBuilder {
     }
 
     /**
-     * Sets the usage message for the command.
      *
      * @param usage The usage message.
      * @return The CommandBuilder instance.
@@ -144,7 +135,6 @@ public class CommandBuilder {
     }
 
     /**
-     * Sets the argument requirements for the command.
      *
      * @param minArgs       The minimum number of arguments.
      * @param maxArgs       The maximum number of arguments.
