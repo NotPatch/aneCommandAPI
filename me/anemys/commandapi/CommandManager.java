@@ -19,7 +19,6 @@ public class CommandManager {
     private static CommandMap commandMap;
 
     /**
-     * Constructor for the CommandManager class.
      *
      * @param plugin The plugin instance.
      */
@@ -79,7 +78,6 @@ public class CommandManager {
     }
 
     /**
-     * Registers a new command.
      *
      * @param name The name of the command.
      * @return A new instance of CommandBuilder.
@@ -89,7 +87,6 @@ public class CommandManager {
     }
 
     /**
-     * Returns the map of commands.
      *
      * @return The map of CommandExecutors.
      */
@@ -98,7 +95,6 @@ public class CommandManager {
     }
 
     /**
-     * Returns the CommandMap instance.
      *
      * @return The CommandMap instance.
      */
