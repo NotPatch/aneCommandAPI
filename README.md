@@ -17,7 +17,7 @@ public Commands(JavaPlugin plugin) { //your command class
                 .aliases("gm", "gamem", "mode")
                 .commandType(CommandType.PLAYER)
                 .permission("gamemode.permission")
-                .noPermissionMessage("§cYou do not have permission to open this shop!")
+                .noPermissionMessage("§cYou do not have permission to this command!")
                 .description("gamemode permission")
                 .usage("/gamemode 0, 1, 2, 3")
                 .arguments(1, 1, plugin.getMsg().getPrefix() + "§cUsage: /gamemode 0, 1, 2, 3")
