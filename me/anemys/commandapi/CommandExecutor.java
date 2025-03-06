@@ -12,7 +12,6 @@ public class CommandExecutor extends Command {
     private final CommandBuilder builder;
 
     /**
-     * Constructor for the CommandExecutor class.
      *
      * @param builder The CommandBuilder instance.
      * @param name    The name of the command.
@@ -23,7 +22,6 @@ public class CommandExecutor extends Command {
     }
 
     /**
-     * Executes the command.
      *
      * @param sender The sender of the command.
      * @param label  The command label.
@@ -77,7 +75,6 @@ public class CommandExecutor extends Command {
     }
 
     /**
-     * Provides tab completion for the command.
      *
      * @param sender The sender of the command.
      * @param alias  The alias used for the command.
@@ -94,7 +91,6 @@ public class CommandExecutor extends Command {
     }
 
     /**
-     * Filters the list of completions based on the input.
      *
      * @param completions The list of completions.
      * @param input       The user's current input.
