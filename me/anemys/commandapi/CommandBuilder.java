@@ -25,6 +25,7 @@ public class CommandBuilder {
     private int minArgs = 0;
     private int maxArgs = -1;
     private String argErrorMessage;
+    private List<String> argErrorMessageList = new ArrayList<>();
 
     /**
      *
@@ -135,6 +136,33 @@ public class CommandBuilder {
     }
 
     /**
+     * Sets a list of usage examples for the command.
+     *
+     * @param usageList The list of usage examples.
+     * @return The CommandBuilder instance.
+     */
+    public CommandBuilder argErrorMessageList(List<String> usageList) {
+        this.argErrorMessageList = usageList;
+        return this;
+    }
+
+    /**
+     * Sets the command usage examples from a varargs list.
+     *
+     * @param usage The usage examples.
+     * @return The CommandBuilder instance.
+     */
+    public CommandBuilder argErrorMessageList(String... usage) {
+        this.argErrorMessageList = Arrays.asList(usage);
+        return this;
+    }
+
+    // usageList getter method
+    public List<String> getArgErrorMessageList() {
+        return argErrorMessageList;
+    }
+
+    /**
      *
      * @param minArgs       The minimum number of arguments.
      * @param maxArgs       The maximum number of arguments.
@@ -148,6 +176,13 @@ public class CommandBuilder {
         return this;
     }
 
+    public CommandBuilder arguments(int minArgs, int maxArgs, List<String> errorMessages) {
+        this.minArgs = minArgs;
+        this.maxArgs = maxArgs;
+        this.argErrorMessageList = errorMessages;
+        return this;
+    }
+
     /**
      * Registers the command with the plugin.
      */
@@ -156,6 +191,7 @@ public class CommandBuilder {
         if (!aliases.isEmpty()) {
             executor.setAliases(aliases);
         }
+
         if (!description.isEmpty()) {
             executor.setDescription(description);
         }

@@ -55,9 +55,17 @@ public class CommandExecutor extends Command {
         if (builder.getMinArgs() > 0 || builder.getMaxArgs() >= 0) {
             if (args.length < builder.getMinArgs() ||
                     (builder.getMaxArgs() >= 0 && args.length > builder.getMaxArgs())) {
+                if(builder.getArgErrorMessage() == null && builder.getArgErrorMessageList() != null && !builder.getArgErrorMessageList().isEmpty()) {
+                    for(String message : getArgErrorMessageList()) {
+                        sender.sendMessage(message);
+                    }
+                    return true;
+
+                }
                 sender.sendMessage(builder.getArgErrorMessage() != null ?
                         builder.getArgErrorMessage() :
                         "Invalid number of arguments! Usage: " + getUsage());
+
                 return true;
             }
         }
@@ -109,4 +117,12 @@ public class CommandExecutor extends Command {
         }
         return filteredCompletions;
     }
+
+    private List<String> getArgErrorMessageList() {
+        if (!builder.getArgErrorMessageList().isEmpty()) {
+            return builder.getArgErrorMessageList();
+        }
+        return Arrays.asList(builder.getArgErrorMessage() != null ? builder.getArgErrorMessage() : "Invalid arguments.");
+    }
+
 }
